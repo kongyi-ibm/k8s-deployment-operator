@@ -131,7 +131,7 @@ func ( c *Controller ) Run(threadiness int, stopCh <-chan struct{}) error {
 	defer c.workqueue.ShutDown()
 
 	// Start the informer factories to begin populating the informer caches
-	klog.Info("Starting Foo controller")
+	klog.Info("Starting DeployDaemon controller")
 
 	// Waiting for the caches to be synced before starting workers
 	klog.Info("Waiting for informer caches to sync")
@@ -314,7 +314,7 @@ func (c *Controller ) reconcile(key string) error {
          	// Here we need the to fill in the conditionSpec with Reason that the Deployment can not be ceate
          	// then update the deploydaemon status -- this will trigger the update event and make the deploymentdaemon be add into this controller loop again.
 		 }
-         klog.Info("Waiting status for deployment %s ", deploydaemon.Status.Cluster.DeploymentName)
+         //klog.Info("Waiting status for deployment %s ", deploydaemon.Status.Cluster.DeploymentName)
 
 	} else {
 

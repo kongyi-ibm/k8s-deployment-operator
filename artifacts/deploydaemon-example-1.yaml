@@ -5,7 +5,7 @@ metadata:
 spec:
   tenant: demo
   environment: qa
-  envtype: auth
+  envtype: live 
   component: ts-app
   image: nginx:latest
   version: 9.0.1.3
